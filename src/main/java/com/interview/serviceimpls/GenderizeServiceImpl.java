@@ -28,7 +28,7 @@ public class GenderizeServiceImpl implements GenderizeService {
     }
 
     @Override
-    @Scheduled(cron = "*/5 * * * * *")
+    @Scheduled(cron = "0 */5 * * * *")
     public void getDataFromApi() {
         String uri = "http://localhost:8080/genderize/get/data";
         Genderize genderize = new RestTemplate().getForObject(uri, Genderize.class);
